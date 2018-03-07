@@ -31,10 +31,17 @@ exports.modifyWebpackConfig = ({config, stage}, pluginOptions) => {
 				exclude: include
 			});			
 		}
+
+    const svgoOpts = {
+      prefixIds: true
+    }
 		
 		config.loader('svg-react-loader', {
 			test: /\.svg$/,
-			loader: 'svg-react-loader',
+			loaders: [
+        `svgo-loader?${JSON.stringify(svgoOpts)}`,
+        'svg-react-loader'
+      ],
 			include,
 			exclude
 		});
