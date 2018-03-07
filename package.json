@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/jacobmischka/gatsby-plugin-react-svg#readme",
   "dependencies": {
+    "file-loader": "^1.1.11",
     "svg-react-loader": "^0.4.4",
     "svgo-loader": "^2.1.0"
   }

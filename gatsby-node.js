@@ -39,6 +39,7 @@ exports.modifyWebpackConfig = ({config, stage}, pluginOptions) => {
 		config.loader('svg-react-loader', {
 			test: /\.svg$/,
 			loaders: [
+        'file-loader',
         `svgo-loader?${JSON.stringify(svgoOpts)}`,
         'svg-react-loader'
       ],
