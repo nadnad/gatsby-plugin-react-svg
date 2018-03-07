@@ -25,6 +25,7 @@ exports.modifyWebpackConfig = ({config, stage}, pluginOptions) => {
 				query: {
 					limit: 10000,
 					name: `static/[name].[hash:8].[ext]`,
+          classIdPrefix: '[name]-[hash:8]__',
 				},
 				include: exclude,
 				exclude: include
